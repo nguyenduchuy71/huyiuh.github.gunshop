@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/mdb.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a class="navbar-brand" href="#">
+                <img class="logo-img"
+                    src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/gun-store-logo-white-mobile.png"
+                    alt="logo">
+            </a>
+            <ul class="nav-item">
+                <li>
+                    <a href="#">All</a>
+                </li>
+                <li>
+                    <a href="#">Handguns</a>
+                </li>
+                <li>
+                    <a href="#">Semi-Auto</a>
+                </li>
+                <li>
+                    <a href="#">Full-Auto</a>
+                </li>
+                <li class="cart">
+                    <a href="#">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="cart-container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <section class="section">
+                    <div class="table-responsive">
+                        <table class="table product-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <img class="img-fluid z-depth-0">
+                                    </th>
+                                    <td>
+                                        <h5>
+                                            <strong></strong>
+                                        </h5>
+                                    </td>
+                                    <td></td>
+                                    <td class="center-on-small-only">
+                                        <span class="qty"></span>
+                                        <div class="btn-group radio-group" data-toggle="buttons">
+                                            <label class="btn btn-sm btn-primary btn-rounded waves-effect waves-light">
+                                                <a>—</a>
+                                            </label>
+                                            <label class="btn btn-sm btn-primary btn-rounded waves-effect waves-light">
+                                                <a>+</a>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-primary waves-effect waves-light"
+                                            data-toggle="tooltip" data-placement="top"
+                                            data-original-title="Remove item">X
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colSpan="3"></td>
+                                    <td>
+                                        <h4>
+                                            <strong>Total</strong>
+                                        </h4>
+                                    </td>
+                                    <td>
+                                        <h4>
+                                            <strong></strong>
+                                        </h4>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <form id="formPlaceOrder" action="/cart/PlaceOrder" method="POST">
+                    <div class="form-group">
+                        <label for="txtCustomerName">Name</label>
+                        <input type="text" class="required form-control" id="txtCustomerName" name="txtCustomerName"
+                            placeholder="Name's customer">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPhone">Phone number</label>
+                        <input type="text" class="required form-control" id="txtPhone" name="txtPhone"
+                            placeholder="Your phone number">
+                        <input type="hidden" name="txtEmail" value="" id="txtEmail">
+                    </div>
+                    <div class="form-group" id="pnlAddress">
+                        <label for="txtPhone">Address</label>
+                        <input type="text" class="required form-control" id="txtAddressLine" name="txtAddressLine"
+                            placeholder="Your address">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtNote">Note</label>
+                        <textarea rows="2" class="form-control" id="txtNote" name="txtNote"></textarea>
+                    </div>
+                    <button class="js-btnPlaceOrder btn btn-info fw">Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="w-col w-col-4 w-col-stack col no-pad">
+            <div class="social-media-icons"> <a class="w-inline-block social-icon-link"
+                    href="//www.tripadvisor.in/Attraction_Review-g45963-d2233714-Reviews-The_Gun_Store-Las_Vegas_Nevada.html"
+                    target="_blank"><img width="35"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white-tripadvisor.png">
+                </a> <a class="w-inline-block social-icon-link" href="https://www.yelp.com/biz/the-gun-store-las-vegas"
+                    target="_blank"><img width="35"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white-yelp.png"> </a>
+                <a class="w-inline-block social-icon-link" href="//twitter.com/gunstore" target="_blank"><img width="35"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white-twitter.png">
+                </a> <a class="w-inline-block social-icon-link"
+                    href="//www.youtube.com/channel/UCE9rBP-hw-oiWcPElc83TSQ" target="_blank"><img width="30"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white_yt.png"> </a> <a
+                    class="w-inline-block social-icon-link" href="//instagram.com/thegunstore/" target="_blank"><img
+                        width="35"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white-ig.png"> </a> <a
+                    class="w-inline-block social-icon-link" href="https://plus.google.com/101133935439486435825"
+                    target="_blank"><img width="35"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white-g+.png"> </a> <a
+                    class="w-inline-block social-icon-link" href="//www.facebook.com/TheGunStore?fref=ts"
+                    target="_blank"><img width="35"
+                        src="https://thegunstorelasvegas.com/wp-content/themes/HoneyBadger/images/white-fb.png"> </a>
+            </div>
+        </div>
+        <div class="w-col w-col-4 w-col-stack col no-pad">
+            <div class="text-white footer-links centered"><a class="footer-link"
+                    href="https://thegunstorelasvegas.com/contact">Contact</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                    class="footer-link" href="https://thegunstorelasvegas.com/faq">FAQ</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                    class="footer-link" href="https://thegunstorelasvegas.com/blog">Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                    class="footer-link" href="https://thegunstorelasvegas.com/privacy-policy">Privacy Policy</a></div>
+        </div>
+        <div class="w-col w-col-4 w-col-stack col no-pad">
+            <div class="text-white copyright-text">© 2020 TheGunStoreLasVegas.com &nbsp;|<a class="footer-link"
+                    href="https://machinegunlasvegas.com">Machine Guns Las Vegas</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
